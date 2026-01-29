@@ -1,9 +1,9 @@
 # Staff Data Engineer Exercise 
 
-This repository contains a thin-slice implementation of a reliable data pipeline built with **dbt** and **DuckDB**. It demonstrates how to transform raw, high-frequency event streams into an analytics-ready representation of order and shipment states.
+This repository contains a thin-slice implementation of a reliable data pipeline built with **dbt** and **DuckDB**. It demonstrates how to transform raw, high-frequency shipment lifecycle event data into an analytics-ready representation of order and shipment states.
 
 ## Mock Data
-The project includes a python script that was used to generate a mock, 100+ record dataset with duplication and late-arriving event data. The dataset generated was saved to `seeds/shipment_events.csv`.
+The project includes a python script that was used to generate a mock, 100+ record dataset with some duplication and late-arriving event data. The dataset generated was saved to `seeds/shipment_lifecycle_events.csv`.
 
 The following command runs the python script to generate the dataset (optional step, since the dataset file is already in the repo):
 ```bash
