@@ -1,50 +1,67 @@
-Order Lifecycle Pipeline Design
-Architecture: Medallion (Bronze/Silver/Gold) using DuckDB for local portability and dbt for transformation.
+# Staff Data Engineer Task: Design Documentation
 
-Deduplication Strategy: Implemented a two-stage window function. The first stage handles event_id collisions at ingestion; the second stage identifies the "Latest Truth" per order_id based on business timestamps to handle out-of-order events.
+## 1. Design Summary (TLDR)
+**Architecture**: Layered (Staging/Intermediate/Marts) using **DuckDB** for local portability and **dbt** for transformations. (*Production Target: Snowflake*).
 
-Schema Evolution: By using select * in staging and explicit casting in the Marts layer, the pipeline is resilient to new upstream attributes while maintaining a strict contract for downstream consumers.
+* **Staging**: `stg_shipment_events` standardizes raw event data.
+* **Intermediate**: `int_shipment_events` and `int_orders` handle deduplication and window functions.
+* **Marts**: `orders` provides an analytics-ready, single-row-per-order grain.
 
-Trade-offs: * Batch vs. Stream: Chosen batch semantics for simplicity and local execution, though the logic is "streaming-ready" (idempotent).
+### Core Strategies
+* **Deduplication**: Uses `row_number()` over `event_id` ordered by `ingest_at` to identify the "Latest Truth" and handle out-of-order events.
+* **Late-Arriving Data**: Business timestamp `ingested_at` determines the most recent record.
+* **Schema Evolution**: Resilient via explicit casting in Staging and `on_schema_change='append_new_columns'` for incremental models.
+* **Idempotency**: Fully re-runnable; incremental logic uses a 3-day look-back buffer for safety.
+* **Reliability**: Enforced via `data_tests` (uniqueness/null) and `accepted_values` validation on carriers and statuses.
 
-State Management: Using ROW_NUMBER() is compute-heavy on massive datasets compared to incremental state tracking, but chosen here for absolute correctness and simplicity in a thin slice.
+---
 
+## 2. Layered Architecture Principles
 
+### **Staging Layer**
+* **Purpose**: 1:1 representation of source data; the foundation for all downstream models.
+* **Rules**: Only layer using the `source` macro. No joins or complex aggregations.
+* **Operations**: Renaming, type casting, basic categorization, and converting units (e.g., cents to dollars).
+* **Materialization**: Views.
 
+### **Intermediate Layer**
+* **Purpose**: The "heavy lifting" layer for complex transformations and enrichment.
+* **Rules**: Uses `ref` macro only. Not exposed to end-users.
+* **Operations**: Joins, deduplication, and complex computations.
+* **Materialization**: Views by default; **Incremental Tables** for high-volume event data.
 
-🏗 Architecture & Design
-This solution implements a Medallion Architecture to ensure data reliability and observability:
+### **Marts Layer**
+* **Purpose**: Conformed, business-ready entities (e.g., Orders, Couriers).
+* **Rules**: Exposed to production schemas for BI and reporting. Denormalized and wide.
+* **Operations**: Final metrics and KPIs. Avoid deduplication here (should be handled in Intermediate).
+* **Materialization**: Tables or Incremental models.
 
-Bronze (Seeds): Raw event data ingested from seed_order_lifecycle_events.csv.
+---
 
-Silver (Staging): stg_order_events handles deduplication and late-arriving data using window functions.
+## 3. Standards & Implementation
 
-Gold (Marts): fct_orders provides a clean, single-row-per-order grain for downstream BI tools.
+### **Model Materialization**
+By default, models are **views**. For performance optimization (especially in Snowflake), we utilize:
+* **Tables**: For models rebuilt entirely each run.
+* **Incremental**: For large datasets to reduce compute by only processing new data.
 
-Key Engineering Decisions
-Deduplication: Uses ROW_NUMBER() over event_id to handle exact duplicates or ingestion retries.
+### **File & Project Structure**
+```text
+models
+├── staging/      # Raw cleaning & casting
+├── intermediate/ # Joins & deduplication
+└── marts/        # Business-facing entities
+```
 
-Late-Arriving Data: Uses business timestamps (event_timestamp) to determine the current state, ensuring that a "Shipped" status is never overwritten by a "Created" event that arrived late.
+### **Documentation & YAML Requirements**
+All models must include descriptions via doc blocks (markdown files) to ensure scalability.
+* **Minimum Tests**: `unique` and `not_null` on primary keys.
+* **Schema Metadata**: Explicit `data_type` definitions for observability.
+* **Exposures**: Document downstream dependencies (dashboards, ML models) to track impact.
 
-Idempotency: The pipeline is designed to be fully re-runnable. Using dbt build ensures that data integrity is verified by automated tests after every run.
+---
 
-
-
-
-🧪 Observability & Quality
-Reliability is built into the code via dbt tests.
-
-Uniqueness: The order_id in the final mart is tested to ensure no duplicates.
-
-Integrity: Status fields are validated against a set of accepted_values.
-
-Validation: You can view test results in the console output after running dbt build.
-
-📁 Project Structure
-/models: SQL transformation logic.
-
-/seeds: Sample CSV data including edge cases (duplicates/late arrivals).
-
-/tests: Data quality assertions.
-
-profiles.yml: Local DuckDB configuration.
+## 4. Validation & Operations
+* **Testing**: Validated via `dbt build`, which runs models and tests sequentially.
+* **Observability**: Integrated via YAML descriptions and dbt-generated documentation.
+* **Trade-offs**: Chose batch processing for this task; however, the idempotent logic allows for near-live execution (every 1-5 mins) via a scheduler like Airflow or dbt Cloud.
