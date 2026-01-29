@@ -1,0 +1,110 @@
+version: 2
+
+models:
+  - name: int_shipment_events
+    description: '{{ doc("int_shipment_events") }}'
+    columns:
+      - name: event_id
+        description: '{{ doc("event_id") }}'
+        data_type: text
+        data_tests:
+          - not_null
+          - unique
+      - name: event_type
+        description: '{{ doc("event_type") }}'
+        data_type: text
+        data_tests:
+          - accepted_values:
+              config:
+                severity: warn
+              values:
+                - order_created
+                - shipment_booked
+                - shipment_dispatched
+                - delivery_completed
+                - delivery_failed
+                - delivery_returned
+      - name: order_id
+        description: '{{ doc("order_id") }}'
+        data_type: text
+        data_tests:
+          - not_null
+      - name: shipment_id
+        description: '{{ doc("shipment_id") }}'
+        data_type: text
+      - name: event_timestamp
+        description: '{{ doc("event_timestamp") }}'
+        data_type: timestamp
+        data_tests:
+          - not_null
+      - name: ingested_at
+        description: '{{ doc("ingested_at") }}'
+        data_type: timestamp
+        data_tests:
+          - not_null
+      - name: carrier
+        description: '{{ doc("carrier") }}'
+        data_type: text
+        data_tests:
+          - accepted_values:
+              config:
+                severity: warn
+              values:
+                - aus_post
+                - dhl
+                - couriers_please
+                - aramex
+      - name: event_attributes
+        description: '{{ doc("event_attributes") }}'
+        data_type: variant
+
+  - name: int_orders
+    description: '{{ doc("orders") }}'
+    columns:
+      - name: order_id
+        description: '{{ doc("order_id") }}'
+        data_type: text
+        data_tests:
+          - not_null
+          - unique
+      - name: first_event_time
+        description: '{{ doc("first_event_time") }}'
+        data_type: timestamp
+        data_tests:
+          - not_null
+      - name: latest_event_time
+        description: '{{ doc("latest_event_time") }}'
+        data_type: timestamp
+        data_tests:
+          - not_null
+      - name: current_shipment_status
+        description: '{{ doc("current_shipment_status") }}'
+        data_type: text
+        data_tests:
+          - accepted_values:
+              config:
+                severity: warn
+              values:
+                - order_created
+                - shipment_booked
+                - shipment_dispatched
+                - delivery_completed
+                - delivery_failed
+                - delivery_returned
+      - name: carrier
+        description: '{{ doc("carrier") }}'
+        data_type: text
+        data_tests:
+          - accepted_values:
+              config:
+                severity: warn
+              values:
+                - aus_post
+                - dhl
+                - couriers_please
+                - aramex
+      - name: last_updated_at
+        description: '{{ doc("last_updated_at") }}'
+        data_type: timestamp
+        data_tests:
+          - not_null

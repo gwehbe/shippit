@@ -1,0 +1,144 @@
+event_id,event_type,order_id,shipment_id,event_timestamp,ingested_at,carrier,attributes
+evt_394,delivery_completed,ord_031,shp_816,2026-01-12T21:00:00Z,2026-01-12T21:03:00Z,aus_post,"{""service_level"": ""express""}"
+evt_971,order_created,ord_018,,2026-01-12T12:50:00Z,2026-01-12T12:54:00Z,,{}
+evt_277,order_created,ord_033,,2026-01-12T15:20:00Z,2026-01-12T15:25:00Z,,{}
+evt_403,delivery_completed,ord_022,shp_910,2026-01-12T19:30:00Z,2026-01-12T19:32:00Z,aus_post,"{""service_level"": ""express""}"
+evt_461,order_created,ord_032,,2026-01-12T15:10:00Z,2026-01-12T15:11:00Z,,{}
+evt_956,shipment_booked,ord_004,shp_724,2026-01-12T12:30:00Z,2026-01-12T12:34:00Z,aramex,"{""service_level"": ""standard""}"
+evt_181,shipment_dispatched,ord_018,shp_144,2026-01-12T16:50:00Z,2026-01-12T16:51:00Z,couriers_please,"{""service_level"": ""express""}"
+evt_366,delivery_completed,ord_024,shp_986,2026-01-12T19:50:00Z,2026-01-12T19:51:00Z,aus_post,"{""service_level"": ""standard""}"
+evt_483,delivery_completed,ord_021,shp_871,2026-01-12T19:20:00Z,2026-01-12T19:22:00Z,couriers_please,"{""service_level"": ""standard""}"
+evt_853,shipment_dispatched,ord_019,shp_250,2026-01-12T17:00:00Z,2026-01-12T17:04:00Z,aramex,"{""service_level"": ""express""}"
+evt_233,shipment_dispatched,ord_034,shp_298,2026-01-12T19:30:00Z,2026-01-12T19:33:00Z,couriers_please,"{""service_level"": ""standard""}"
+evt_496,shipment_dispatched,ord_003,shp_949,2026-01-12T14:20:00Z,2026-01-12T14:23:00Z,aus_post,"{""service_level"": ""express""}"
+evt_114,delivery_completed,ord_999,shp_999,2026-01-11T15:00:00Z,2026-01-12T23:50:00Z,dhl,express
+evt_358,shipment_dispatched,ord_012,shp_848,2026-01-12T15:50:00Z,2026-01-12T15:54:00Z,aus_post,"{""service_level"": ""express""}"
+evt_805,delivery_completed,ord_012,shp_848,2026-01-12T17:50:00Z,2026-01-12T17:51:00Z,dhl,"{""service_level"": ""standard""}"
+evt_173,shipment_booked,ord_030,shp_164,2026-01-12T16:50:00Z,2026-01-12T16:55:30Z,dhl,"{""service_level"": ""express""}"
+evt_424,order_created,ord_003,,2026-01-12T10:20:00Z,2026-01-12T10:24:30Z,,{}
+evt_900,order_created,ord_026,,2026-01-12T14:10:00Z,2026-01-12T14:12:00Z,,{}
+evt_555,delivery_completed,ord_010,shp_126,2026-01-12T17:30:00Z,2026-01-12T17:35:00Z,couriers_please,"{""service_level"": ""express""}"
+evt_814,order_created,ord_011,,2026-01-12T11:40:00Z,2026-01-12T11:43:00Z,,{}
+evt_836,delivery_completed,ord_013,shp_509,2026-01-12T18:00:00Z,2026-01-12T18:01:00Z,aramex,"{""service_level"": ""standard""}"
+evt_858,order_created,ord_002,,2026-01-12T10:10:00Z,2026-01-12T10:11:00Z,,{}
+evt_899,shipment_dispatched,ord_004,shp_724,2026-01-12T14:30:00Z,2026-01-12T14:31:00Z,aus_post,"{""service_level"": ""standard""}"
+evt_706,order_created,ord_025,,2026-01-12T14:00:00Z,2026-01-12T14:02:00Z,,{}
+evt_488,order_created,ord_014,,2026-01-12T12:10:00Z,2026-01-12T12:13:00Z,,{}
+evt_768,delivery_completed,ord_008,shp_535,2026-01-12T17:10:00Z,2026-01-12T17:12:00Z,aus_post,"{""service_level"": ""standard""}"
+evt_100,order_created,ord_024,,2026-01-12T13:50:00Z,2026-01-12T13:51:00Z,,{}
+evt_282,shipment_booked,ord_023,shp_552,2026-01-12T15:40:00Z,2026-01-12T15:44:00Z,aus_post,"{""service_level"": ""standard""}"
+evt_710,shipment_dispatched,ord_010,shp_126,2026-01-12T15:30:00Z,2026-01-12T15:33:00Z,aramex,"{""service_level"": ""standard""}"
+evt_995,shipment_booked,ord_016,shp_301,2026-01-12T14:30:00Z,2026-01-12T14:32:00Z,aramex,"{""service_level"": ""express""}"
+evt_388,delivery_completed,ord_027,shp_409,2026-01-12T20:20:00Z,2026-01-12T20:23:00Z,aramex,"{""service_level"": ""express""}"
+evt_639,delivery_completed,ord_014,shp_745,2026-01-12T18:10:00Z,2026-01-12T18:13:00Z,dhl,"{""service_level"": ""standard""}"
+evt_992,delivery_completed,ord_011,shp_912,2026-01-12T17:40:00Z,2026-01-12T17:45:00Z,couriers_please,"{""service_level"": ""standard""}"
+evt_938,shipment_dispatched,ord_016,shp_301,2026-01-12T16:30:00Z,2026-01-12T16:35:00Z,aus_post,"{""service_level"": ""express""}"
+evt_459,shipment_booked,ord_025,shp_480,2026-01-12T16:00:00Z,2026-01-12T16:01:00Z,aramex,"{""service_level"": ""standard""}"
+evt_146,delivery_completed,ord_033,shp_827,2026-01-12T21:20:00Z,2026-01-12T21:23:00Z,couriers_please,"{""service_level"": ""express""}"
+evt_485,delivery_completed,ord_001,shp_758,2026-01-12T16:00:00Z,2026-01-12T16:05:00Z,aus_post,"{""service_level"": ""standard""}"
+evt_129,shipment_booked,ord_026,shp_579,2026-01-12T16:10:00Z,2026-01-12T16:15:00Z,aramex,"{""service_level"": ""express""}"
+evt_325,shipment_booked,ord_007,shp_937,2026-01-12T13:00:00Z,2026-01-12T13:03:00Z,aramex,"{""service_level"": ""standard""}"
+evt_928,order_created,ord_006,,2026-01-12T10:50:00Z,2026-01-12T10:53:00Z,,{}
+evt_972,delivery_completed,ord_016,shp_301,2026-01-12T18:30:00Z,2026-01-12T18:31:00Z,aus_post,"{""service_level"": ""express""}"
+evt_202,shipment_booked,ord_006,shp_195,2026-01-12T12:50:00Z,2026-01-12T12:52:00Z,aus_post,"{""service_level"": ""standard""}"
+evt_462,order_created,ord_029,,2026-01-12T14:40:00Z,2026-01-12T14:45:00Z,,{}
+evt_196,shipment_dispatched,ord_017,shp_407,2026-01-12T16:40:00Z,2026-01-12T16:45:00Z,aus_post,"{""service_level"": ""standard""}"
+evt_530,shipment_dispatched,ord_009,shp_680,2026-01-12T15:20:00Z,2026-01-12T15:21:00Z,aus_post,"{""service_level"": ""standard""}"
+evt_874,order_created,ord_028,,2026-01-12T14:30:00Z,2026-01-12T14:33:00Z,,{}
+evt_248,shipment_booked,ord_008,shp_535,2026-01-12T13:10:00Z,2026-01-12T13:11:00Z,aus_post,"{""service_level"": ""standard""}"
+evt_375,shipment_dispatched,ord_001,shp_758,2026-01-12T14:00:00Z,2026-01-12T14:05:00Z,dhl,"{""service_level"": ""express""}"
+evt_924,delivery_completed,ord_005,shp_294,2026-01-12T16:40:00Z,2026-01-12T16:44:00Z,aramex,"{""service_level"": ""standard""}"
+evt_290,order_created,ord_015,,2026-01-12T12:20:00Z,2026-01-12T12:24:00Z,,{}
+evt_344,shipment_booked,ord_012,shp_848,2026-01-12T13:50:00Z,2026-01-12T13:52:00Z,dhl,"{""service_level"": ""express""}"
+evt_705,order_created,ord_009,,2026-01-12T11:20:00Z,2026-01-12T11:21:00Z,,{}
+evt_233,shipment_dispatched,ord_034,shp_298,2026-01-12T19:30:00Z,2026-01-12T19:33:30Z,couriers_please,"{""service_level"": ""standard""}"
+evt_482,shipment_booked,ord_027,shp_409,2026-01-12T16:20:00Z,2026-01-12T16:21:00Z,couriers_please,"{""service_level"": ""express""}"
+evt_607,shipment_booked,ord_001,shp_758,2026-01-12T12:00:00Z,2026-01-12T12:04:00Z,aramex,"{""service_level"": ""express""}"
+evt_720,delivery_completed,ord_003,shp_949,2026-01-12T16:20:00Z,2026-01-12T16:22:00Z,dhl,"{""service_level"": ""express""}"
+evt_126,order_created,ord_022,,2026-01-12T13:30:00Z,2026-01-12T13:32:00Z,,{}
+evt_922,shipment_dispatched,ord_029,shp_297,2026-01-12T18:40:00Z,2026-01-12T18:41:00Z,aus_post,"{""service_level"": ""standard""}"
+evt_531,order_created,ord_027,,2026-01-12T14:20:00Z,2026-01-12T14:21:00Z,,{}
+evt_315,order_created,ord_030,,2026-01-12T14:50:00Z,2026-01-12T14:52:00Z,,{}
+evt_406,shipment_booked,ord_014,shp_745,2026-01-12T14:10:00Z,2026-01-12T14:11:00Z,aramex,"{""service_level"": ""standard""}"
+evt_317,shipment_dispatched,ord_008,shp_535,2026-01-12T15:10:00Z,2026-01-12T15:12:00Z,aus_post,"{""service_level"": ""standard""}"
+evt_700,order_created,ord_005,,2026-01-12T10:40:00Z,2026-01-12T10:41:00Z,,{}
+evt_749,shipment_booked,ord_019,shp_250,2026-01-12T15:00:00Z,2026-01-12T15:05:00Z,dhl,"{""service_level"": ""standard""}"
+evt_280,shipment_booked,ord_029,shp_297,2026-01-12T16:40:00Z,2026-01-12T16:41:00Z,couriers_please,"{""service_level"": ""standard""}"
+evt_216,shipment_booked,ord_028,shp_352,2026-01-12T16:30:00Z,2026-01-12T16:33:00Z,aus_post,"{""service_level"": ""standard""}"
+evt_790,shipment_dispatched,ord_013,shp_509,2026-01-12T16:00:00Z,2026-01-12T16:02:00Z,aramex,"{""service_level"": ""standard""}"
+evt_272,order_created,ord_001,,2026-01-12T10:00:00Z,2026-01-12T10:04:00Z,,{}
+evt_802,shipment_dispatched,ord_025,shp_480,2026-01-12T18:00:00Z,2026-01-12T18:02:00Z,aramex,"{""service_level"": ""standard""}"
+evt_416,delivery_completed,ord_018,shp_144,2026-01-12T18:50:00Z,2026-01-12T18:53:00Z,aramex,"{""service_level"": ""express""}"
+evt_679,order_created,ord_004,,2026-01-12T10:30:00Z,2026-01-12T10:33:00Z,,{}
+evt_448,order_created,ord_010,,2026-01-12T11:30:00Z,2026-01-12T11:31:00Z,,{}
+evt_289,shipment_dispatched,ord_027,shp_409,2026-01-12T18:20:00Z,2026-01-12T18:23:00Z,couriers_please,"{""service_level"": ""express""}"
+evt_909,shipment_booked,ord_024,shp_986,2026-01-12T15:50:00Z,2026-01-12T15:51:00Z,dhl,"{""service_level"": ""express""}"
+evt_525,shipment_dispatched,ord_011,shp_912,2026-01-12T15:40:00Z,2026-01-12T15:42:00Z,aus_post,"{""service_level"": ""standard""}"
+evt_205,shipment_booked,ord_017,shp_407,2026-01-12T14:40:00Z,2026-01-12T14:45:00Z,aramex,"{""service_level"": ""standard""}"
+evt_101,shipment_booked,ord_002,shp_500,2026-01-12T12:10:00Z,2026-01-12T12:11:00Z,couriers_please,"{""service_level"": ""express""}"
+evt_435,order_created,ord_013,,2026-01-12T12:00:00Z,2026-01-12T12:03:00Z,,{}
+evt_153,shipment_dispatched,ord_020,shp_799,2026-01-12T17:10:00Z,2026-01-12T17:13:00Z,couriers_please,"{""service_level"": ""express""}"
+evt_723,shipment_dispatched,ord_024,shp_986,2026-01-12T17:50:00Z,2026-01-12T17:52:00Z,aus_post,"{""service_level"": ""express""}"
+evt_694,shipment_dispatched,ord_021,shp_871,2026-01-12T17:20:00Z,2026-01-12T17:25:00Z,aus_post,"{""service_level"": ""standard""}"
+evt_358,shipment_dispatched,ord_012,shp_848,2026-01-12T15:50:00Z,2026-01-12T15:54:30Z,aus_post,"{""service_level"": ""express""}"
+evt_254,order_created,ord_031,,2026-01-12T15:00:00Z,2026-01-12T15:03:00Z,,{}
+evt_303,delivery_completed,ord_030,shp_164,2026-01-12T20:50:00Z,2026-01-12T20:53:00Z,couriers_please,"{""service_level"": ""express""}"
+evt_304,shipment_booked,ord_011,shp_912,2026-01-12T13:40:00Z,2026-01-12T13:44:00Z,aramex,"{""service_level"": ""standard""}"
+evt_739,delivery_completed,ord_029,shp_297,2026-01-12T20:40:00Z,2026-01-12T20:43:00Z,couriers_please,"{""service_level"": ""standard""}"
+evt_171,shipment_dispatched,ord_032,shp_930,2026-01-12T19:10:00Z,2026-01-12T19:13:00Z,aramex,"{""service_level"": ""express""}"
+evt_729,shipment_booked,ord_021,shp_871,2026-01-12T15:20:00Z,2026-01-12T15:23:00Z,aramex,"{""service_level"": ""express""}"
+evt_821,delivery_completed,ord_032,shp_930,2026-01-12T21:10:00Z,2026-01-12T21:15:00Z,dhl,"{""service_level"": ""standard""}"
+evt_475,order_created,ord_017,,2026-01-12T12:40:00Z,2026-01-12T12:44:00Z,,{}
+evt_746,shipment_booked,ord_010,shp_126,2026-01-12T13:30:00Z,2026-01-12T13:32:00Z,dhl,"{""service_level"": ""express""}"
+evt_937,order_created,ord_008,,2026-01-12T11:10:00Z,2026-01-12T11:12:00Z,,{}
+evt_688,shipment_booked,ord_015,shp_926,2026-01-12T14:20:00Z,2026-01-12T14:25:00Z,aramex,"{""service_level"": ""express""}"
+evt_440,order_created,ord_999,,2026-01-11T09:00:00Z,2026-01-12T23:59:59Z,,
+evt_424,order_created,ord_003,,2026-01-12T10:20:00Z,2026-01-12T10:24:00Z,,{}
+evt_715,shipment_booked,ord_032,shp_930,2026-01-12T17:10:00Z,2026-01-12T17:15:00Z,dhl,"{""service_level"": ""express""}"
+evt_390,shipment_dispatched,ord_015,shp_926,2026-01-12T16:20:00Z,2026-01-12T16:21:00Z,dhl,"{""service_level"": ""standard""}"
+evt_680,shipment_booked,ord_005,shp_294,2026-01-12T12:40:00Z,2026-01-12T12:41:00Z,dhl,"{""service_level"": ""standard""}"
+evt_231,delivery_completed,ord_015,shp_926,2026-01-12T18:20:00Z,2026-01-12T18:23:00Z,dhl,"{""service_level"": ""standard""}"
+evt_732,delivery_completed,ord_020,shp_799,2026-01-12T19:10:00Z,2026-01-12T19:15:00Z,aramex,"{""service_level"": ""express""}"
+evt_310,delivery_completed,ord_025,shp_480,2026-01-12T20:00:00Z,2026-01-12T20:05:00Z,couriers_please,"{""service_level"": ""express""}"
+evt_969,shipment_dispatched,ord_014,shp_745,2026-01-12T16:10:00Z,2026-01-12T16:11:00Z,aus_post,"{""service_level"": ""express""}"
+evt_283,order_created,ord_012,,2026-01-12T11:50:00Z,2026-01-12T11:51:00Z,,{}
+evt_954,shipment_booked,ord_020,shp_799,2026-01-12T15:10:00Z,2026-01-12T15:12:00Z,aramex,"{""service_level"": ""standard""}"
+evt_857,shipment_booked,ord_003,shp_949,2026-01-12T12:20:00Z,2026-01-12T12:22:00Z,aus_post,"{""service_level"": ""standard""}"
+evt_841,shipment_dispatched,ord_022,shp_910,2026-01-12T17:30:00Z,2026-01-12T17:34:00Z,dhl,"{""service_level"": ""standard""}"
+evt_581,shipment_booked,ord_018,shp_144,2026-01-12T14:50:00Z,2026-01-12T14:54:00Z,dhl,"{""service_level"": ""standard""}"
+evt_349,shipment_booked,ord_009,shp_680,2026-01-12T13:20:00Z,2026-01-12T13:25:00Z,aramex,"{""service_level"": ""express""}"
+evt_322,delivery_completed,ord_009,shp_680,2026-01-12T17:20:00Z,2026-01-12T17:24:00Z,aus_post,"{""service_level"": ""express""}"
+evt_145,delivery_completed,ord_007,shp_937,2026-01-12T17:00:00Z,2026-01-12T17:02:00Z,aramex,"{""service_level"": ""express""}"
+evt_247,delivery_completed,ord_026,shp_579,2026-01-12T20:10:00Z,2026-01-12T20:14:00Z,dhl,"{""service_level"": ""express""}"
+evt_361,shipment_booked,ord_031,shp_816,2026-01-12T17:00:00Z,2026-01-12T17:03:00Z,aramex,"{""service_level"": ""standard""}"
+evt_176,order_created,ord_023,,2026-01-12T13:40:00Z,2026-01-12T13:44:00Z,,{}
+evt_980,delivery_completed,ord_019,shp_250,2026-01-12T19:00:00Z,2026-01-12T19:04:00Z,aus_post,"{""service_level"": ""standard""}"
+evt_422,delivery_completed,ord_006,shp_195,2026-01-12T16:50:00Z,2026-01-12T16:51:00Z,aus_post,"{""service_level"": ""standard""}"
+evt_425,shipment_dispatched,ord_028,shp_352,2026-01-12T18:30:00Z,2026-01-12T18:34:00Z,couriers_please,"{""service_level"": ""express""}"
+evt_232,delivery_completed,ord_023,shp_552,2026-01-12T19:40:00Z,2026-01-12T19:42:00Z,aramex,"{""service_level"": ""express""}"
+evt_735,shipment_dispatched,ord_006,shp_195,2026-01-12T14:50:00Z,2026-01-12T14:54:00Z,aus_post,"{""service_level"": ""express""}"
+evt_511,shipment_dispatched,ord_030,shp_164,2026-01-12T18:50:00Z,2026-01-12T18:53:00Z,couriers_please,"{""service_level"": ""standard""}"
+evt_130,shipment_booked,ord_034,shp_298,2026-01-12T17:30:00Z,2026-01-12T17:32:00Z,aramex,"{""service_level"": ""express""}"
+evt_173,shipment_booked,ord_030,shp_164,2026-01-12T16:50:00Z,2026-01-12T16:55:00Z,dhl,"{""service_level"": ""express""}"
+evt_696,shipment_dispatched,ord_033,shp_827,2026-01-12T19:20:00Z,2026-01-12T19:24:00Z,aus_post,"{""service_level"": ""standard""}"
+evt_535,order_created,ord_019,,2026-01-12T13:00:00Z,2026-01-12T13:03:00Z,,{}
+evt_850,order_created,ord_034,,2026-01-12T15:30:00Z,2026-01-12T15:31:00Z,,{}
+evt_915,shipment_booked,ord_033,shp_827,2026-01-12T17:20:00Z,2026-01-12T17:21:00Z,aus_post,"{""service_level"": ""express""}"
+evt_903,shipment_dispatched,ord_005,shp_294,2026-01-12T14:40:00Z,2026-01-12T14:43:00Z,aramex,"{""service_level"": ""standard""}"
+evt_713,delivery_completed,ord_004,shp_724,2026-01-12T16:30:00Z,2026-01-12T16:35:00Z,couriers_please,"{""service_level"": ""express""}"
+evt_374,order_created,ord_020,,2026-01-12T13:10:00Z,2026-01-12T13:13:00Z,,{}
+evt_231,delivery_completed,ord_015,shp_926,2026-01-12T18:20:00Z,2026-01-12T18:23:30Z,dhl,"{""service_level"": ""standard""}"
+evt_118,order_created,ord_007,,2026-01-12T11:00:00Z,2026-01-12T11:04:00Z,,{}
+evt_879,order_created,ord_016,,2026-01-12T12:30:00Z,2026-01-12T12:34:00Z,,{}
+evt_135,delivery_completed,ord_034,shp_298,2026-01-12T21:30:00Z,2026-01-12T21:32:00Z,aus_post,"{""service_level"": ""standard""}"
+evt_256,shipment_dispatched,ord_031,shp_816,2026-01-12T19:00:00Z,2026-01-12T19:03:00Z,couriers_please,"{""service_level"": ""express""}"
+evt_927,shipment_dispatched,ord_026,shp_579,2026-01-12T18:10:00Z,2026-01-12T18:14:00Z,couriers_please,"{""service_level"": ""standard""}"
+evt_229,delivery_completed,ord_028,shp_352,2026-01-12T20:30:00Z,2026-01-12T20:35:00Z,dhl,"{""service_level"": ""standard""}"
+evt_257,delivery_completed,ord_017,shp_407,2026-01-12T18:40:00Z,2026-01-12T18:44:00Z,aramex,"{""service_level"": ""express""}"
+evt_450,shipment_dispatched,ord_023,shp_552,2026-01-12T17:40:00Z,2026-01-12T17:44:00Z,aus_post,"{""service_level"": ""standard""}"
+evt_976,delivery_completed,ord_002,shp_500,2026-01-12T16:10:00Z,2026-01-12T16:14:00Z,couriers_please,"{""service_level"": ""standard""}"
+evt_742,order_created,ord_021,,2026-01-12T13:20:00Z,2026-01-12T13:21:00Z,,{}
+evt_636,shipment_booked,ord_022,shp_910,2026-01-12T15:30:00Z,2026-01-12T15:34:00Z,aus_post,"{""service_level"": ""express""}"
+evt_188,shipment_booked,ord_013,shp_509,2026-01-12T14:00:00Z,2026-01-12T14:02:00Z,aus_post,"{""service_level"": ""standard""}"
+evt_382,shipment_dispatched,ord_007,shp_937,2026-01-12T15:00:00Z,2026-01-12T15:02:00Z,aramex,"{""service_level"": ""standard""}"
+evt_252,shipment_dispatched,ord_002,shp_500,2026-01-12T14:10:00Z,2026-01-12T14:14:00Z,aramex,"{""service_level"": ""standard""}"

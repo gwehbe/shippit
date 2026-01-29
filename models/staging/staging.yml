@@ -1,0 +1,58 @@
+version: 2
+
+models:
+  - name: stg_shipment_events
+    description: '{{ doc("stg_shipment_events") }}'
+    columns:
+      - name: event_id
+        description: '{{ doc("event_id") }}'
+        data_type: text
+        data_tests:
+          - not_null
+      - name: event_type
+        description: '{{ doc("event_type") }}'
+        data_type: text
+        data_tests:
+          - accepted_values:
+              config:
+                severity: warn
+              values:
+                - order_created
+                - shipment_booked
+                - shipment_dispatched
+                - delivery_completed
+                - delivery_failed
+                - delivery_returned
+      - name: order_id
+        description: '{{ doc("order_id") }}'
+        data_type: text
+        data_tests:
+          - not_null
+      - name: shipment_id
+        description: '{{ doc("shipment_id") }}'
+        data_type: text
+      - name: event_timestamp
+        description: '{{ doc("event_timestamp") }}'
+        data_type: timestamp
+        data_tests:
+          - not_null
+      - name: ingested_at
+        description: '{{ doc("ingested_at") }}'
+        data_type: timestamp
+        data_tests:
+          - not_null
+      - name: carrier
+        description: '{{ doc("carrier") }}'
+        data_type: text
+        data_tests:
+          - accepted_values:
+              config:
+                severity: warn
+              values:
+                - aus_post
+                - dhl
+                - couriers_please
+                - aramex
+      - name: event_attributes
+        description: '{{ doc("event_attributes") }}'
+        data_type: variant

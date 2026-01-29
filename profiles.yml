@@ -1,0 +1,17 @@
+
+shippit_project:
+  outputs:
+    dev:
+      type: duckdb
+      path: 'dev.duckdb'
+      extensions:
+        - icu
+        - parquet
+      threads: 1
+    
+    prod:
+      type: duckdb
+      path: prod.duckdb
+      threads: 4
+
+  target: dev
